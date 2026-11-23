@@ -226,21 +226,15 @@
 
                 <button type="button" id="btn-iniciar-conversa" class="solid">Iniciar conversa</button>
             </div>
-            <button type="button" id="btn-iniciar-conversa" class="solid">Iniciar conversa</button>
-            </div>
 
-            <!-- Card do Calendário de Disponibilidade -->
+  <!-- Card do Calendário de Disponibilidade -->
             <div class="card" id="card-calendario">
                 <h3 class="cal-titulo">Disponibilidade</h3>
 
                 <div class="cal-topo">
-                    <button type="button" id="cal-mes-anterior" class="cal-nav-btn" aria-label="Mês anterior">
-                        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
-                    </button>
-                    <span id="cal-mes-ano" class="cal-mes-ano">Novembro 2026</span>
-                    <button type="button" id="cal-mes-proximo" class="cal-nav-btn" aria-label="Próximo mês">
-                        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                    </button>
+                    <button type="button" id="cal-mes-anterior" aria-label="Mês anterior">&lsaquo;</button>
+                    <span id="cal-mes-ano">Novembro 2026</span>
+                    <button type="button" id="cal-mes-proximo" aria-label="Próximo mês">&rsaquo;</button>
                 </div>
 
                 <div class="cal-dias-semana">
@@ -256,15 +250,14 @@
                 <div id="cal-grade-dias" class="cal-grade-dias"></div>
 
                 <div class="cal-legenda">
-                    <span><i class="bolinha com-hospedes"></i> Disponível com hóspedes</span>
-                    <span><i class="bolinha disponivel"></i> Totalmente disponível</span>
-                    <span><i class="bolinha sem-vaga"></i> Sem vaga</span>
+                    <span><i class="ponto azul"></i> Disponível com hóspedes</span>
+                    <span><i class="ponto verde"></i> Totalmente disponível</span>
                 </div>
 
                 <p id="cal-status-clique" class="cal-status-clique"></p>
 
                 <div class="cal-rodape">
-                    <svg class="cal-dog-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                    <svg width="20" height="20" style="width: 20px !important; height: 20px !important; min-width: 20px; flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M10 5.172C10 3.782 8.423 2.679 6.5 3c-2.823.47-4.113 6.006-4 7 .08.703 1.725 1.722 3.656 1 1.261-.472 1.96-1.45 2.344-2.5"/>
                         <path d="M14.267 5.172c0-1.39 1.577-2.493 3.5-2.172 2.823.47 4.113 6.006 4 7-.08.703-1.725 1.722-3.656 1-1.261-.472-1.855-1.45-2.239-2.5"/>
                         <path d="M8 14v.5"/>
