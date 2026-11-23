@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
   let mesExibido = hoje.getMonth();
   let anoExibido = hoje.getFullYear();
 
-  // Guarda os dias sorteados para não mudarem ao navegar entre meses
   const cacheDisponibilidade = {};
 
   function formatarChaveData(ano, mes, dia) {
@@ -28,10 +27,16 @@ document.addEventListener("DOMContentLoaded", function () {
     return `${d}/${m}/${ano}`;
   }
 
-  function temVagaNoDia(chaveData) {
-    if (cacheDisponibilidade[chaveData] === undefined) {
-      // ~65% de chance de ter vaga e ~35% de estar lotado
-      cacheDisponibilidade[chaveData] = Math.random() < 0.65;
+  function obterStatusDia(chaveData) {
+    if (!cacheDisponibilidade[chaveData]) {
+      const sorteio = Math.random();
+      if (sorteio < 0.5) {
+        cacheDisponibilidade[chaveData] = "totalmente-disponivel"; // Verde
+      } else if (sorteio < 0.78) {
+        cacheDisponibilidade[chaveData] = "com-hospedes"; // Azul
+      } else {
+        cacheDisponibilidade[chaveData] = "sem-vaga"; // Riscado
+      }
     }
     return cacheDisponibilidade[chaveData];
   }
@@ -44,44 +49,56 @@ document.addEventListener("DOMContentLoaded", function () {
       month: "long",
       year: "numeric",
     });
-    tituloMesAno.textContent = nomeMes;
+    tituloMesAno.textContent = nomeMes.replace(" de ", " ");
 
-    const primeiroDiaSemana = dataReferencia.getDay(); // 0 (Dom) a 6 (Sáb)
+    // Ajusta o índice para semana começando na Segunda-feira (S=0 ... D=6)
+    const espacosVazios = (dataReferencia.getDay() + 6) % 7;
     const totalDiasMes = new Date(anoExibido, mesExibido + 1, 0).getDate();
 
-    // Espaços vazios antes do dia 1
-    for (let i = 0; i < primeiroDiaSemana; i++) {
+    for (let i = 0; i < espacosVazios; i++) {
       const vazio = document.createElement("span");
-      vazio.className = "cal-dia vazio";
+      vazio.className = "cal-celula";
       gradeDias.appendChild(vazio);
     }
 
-    // Dias do mês
     for (let dia = 1; dia <= totalDiasMes; dia++) {
-      const dataAtualCelula = new Date(anoExibido, mesExibido, dia);
+      const dataCelula = new Date(anoExibido, mesExibido, dia);
       const chave = formatarChaveData(anoExibido, mesExibido, dia);
       const dataBR = formatarDataBR(anoExibido, mesExibido, dia);
 
       const btnDia = document.createElement("button");
       btnDia.type = "button";
-      btnDia.textContent = dia;
-      btnDia.className = "cal-dia";
+      btnDia.className = "cal-celula";
 
-      if (dataAtualCelula < hoje) {
+      const spanNum = document.createElement("span");
+      spanNum.className = "num-dia";
+      spanNum.textContent = dia;
+      btnDia.appendChild(spanNum);
+
+      if (dataCelula < hoje) {
         btnDia.classList.add("passado");
         btnDia.disabled = true;
-        btnDia.title = "Data passada";
       } else {
-        const disponivel = temVagaNoDia(chave);
+        const status = obterStatusDia(chave);
+        btnDia.classList.add(status);
 
-        if (disponivel) {
-          btnDia.classList.add("vaga");
-          btnDia.title = `${dataBR}: Vaga disponível`;
+        if (status === "totalmente-disponivel" || status === "com-hospedes") {
+          const bolinha = document.createElement("span");
+          bolinha.className = "bolinha-status";
+          btnDia.appendChild(bolinha);
+
+          const textoStatus =
+            status === "totalmente-disponivel"
+              ? "Totalmente disponível"
+              : "Disponível com hóspedes";
+
+          btnDia.title = `${dataBR}: ${textoStatus}`;
+
           btnDia.addEventListener("click", function () {
-            statusClique.textContent = `✅ ${dataBR}: Vaga disponível!`;
-            statusClique.style.color = "#15803d";
+            statusClique.textContent = `${dataBR} — ${textoStatus}`;
+            statusClique.style.color =
+              status === "totalmente-disponivel" ? "#2e8540" : "#2563eb";
 
-            // Preenche o Check-in no formulário de reserva, se existir
             const inputCheckin = document.getElementById("checkin");
             if (inputCheckin) {
               inputCheckin.value = chave;
@@ -89,11 +106,10 @@ document.addEventListener("DOMContentLoaded", function () {
             }
           });
         } else {
-          btnDia.classList.add("lotado");
-          btnDia.title = `${dataBR}: Sem vagas`;
+          btnDia.title = `${dataBR}: Sem vaga`;
           btnDia.addEventListener("click", function () {
-            statusClique.textContent = `❌ ${dataBR}: Sem vagas nesta data.`;
-            statusClique.style.color = "#b91c1c";
+            statusClique.textContent = `${dataBR} — Sem vagas disponíveis`;
+            statusClique.style.color = "#94a3b8";
           });
         }
       }
