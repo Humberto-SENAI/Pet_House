@@ -27,12 +27,12 @@ document.addEventListener("DOMContentLoaded", function () {
     { src: "Pug.jpg", alt: "Pug feliz" },
     { src: "Anitta.jpg", alt: "Beagle pedindo comida "},
     { src: "Pequenos.jpg", alt: "Irmãozinhos juntos" },
-    { src: "Golden.jpg", alt: "Beagle aproveitando o sol "},
+    { src: "Golden.jpg", alt: "Beagle aproveitando o sol"},
     { src: "Beagles_Sentados.jpg", alt: "Beagles sentados no sofá" },
     { src: "Sirius.jpg", alt: "Olhar de mil jardas"},
     { src: "Familia.jpg", alt: "Família de Beagles"},
-    { src: "Quintal.jpg", alt: "Quintal de casa"},
-    { src: "Beagle_Velinho.jpg", alt: "Velinho aproveitando o sol."}
+    { src: "Quintal_Casa.jpg", alt: "Quintal de casa"},
+    { src: "Beagle_Velinho.jpg", alt: "Velinho aproveitando o sol"}
   ];
 
   // Junta as fotos visíveis no mosaico com as fotos extras
