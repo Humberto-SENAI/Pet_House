@@ -226,6 +226,39 @@
 
                 <button type="button" id="btn-iniciar-conversa" class="solid">Iniciar conversa</button>
             </div>
+            <button type="button" id="btn-iniciar-conversa" class="solid">Iniciar conversa</button>
+            </div>
+
+            <!-- Card do Calendário de Disponibilidade -->
+            <div class="card" id="card-calendario">
+                <div class="cal-topo">
+                    <button type="button" id="cal-mes-anterior" aria-label="Mês anterior">‹</button>
+                    <h4 id="cal-mes-ano">Mês Ano</h4>
+                    <button type="button" id="cal-mes-proximo" aria-label="Próximo mês">›</button>
+                </div>
+
+                <div class="cal-dias-semana">
+                    <span>D</span>
+                    <span>S</span>
+                    <span>T</span>
+                    <span>Q</span>
+                    <span>Q</span>
+                    <span>S</span>
+                    <span>S</span>
+                </div>
+
+                <div id="cal-grade-dias" class="cal-grade-dias"></div>
+
+                <div class="cal-legenda">
+                    <span><i class="bolinha vaga"></i> Com vaga</span>
+                    <span><i class="bolinha lotado"></i> Sem vaga</span>
+                </div>
+
+                <p id="cal-status-clique" class="cal-status-clique">
+                    Clique em um dia para conferir ou preencher o Check-in.
+                </p>
+            </div>
+        </aside>
         </aside>
     </main>
 
@@ -257,5 +290,6 @@
     <script src="avaliacoes.js"></script>
     <script src="galeria.js"></script>
     <script src="navegacao.js"></script>
+    <script src="Calendario.js"></script>
 </body>
 </html>
