@@ -29,7 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
     { src: "Pequenos.jpg", alt: "Irmãozinhos juntos" },
     { src: "Golden.jpg", alt: "Beagle aproveitando o sol "},
     { src: "Beagles_Sentados.jpg", alt: "Beagles sentados no sofá" },
-    { src: "Sirius.jpg", alt: "Olhar de mil jardas"}
+    { src: "Sirius.jpg", alt: "Olhar de mil jardas"},
+    { src: "Familia.jpg", alt: "Família de Beagles"}
   ];
 
   // Junta as fotos visíveis no mosaico com as fotos extras
