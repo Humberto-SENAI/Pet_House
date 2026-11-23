@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paloma - Hospedagem</title>
+    <!-- Importação de Fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <!-- Folha de estilo externa -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="Cabecalho">
+        <img src="Paloma.jpg" alt="Hospedagem" class="logo" width="250">
+        <nav class="Menu">
+            <a href="#sobre">Sobre</a>
+            <a href="#card-hospedagem">Preços</a>
+            <a href="#contato" id="btn-fale-paloma" class="botao-destaque">Fale com a Paloma</a>
+        </nav>
+        <div class="Header">
+            <div class="avatar">
+                <img src="MileyCyrus.jpg" alt="Foto de perfil" class="Foto-perfil">
+            </div>
+            <div class="perfil">
+                <h1>Paloma</h1>
+                <p>Bosque, Campinas - SP</p>
+                <p>⭐ 5 (616 avaliações)</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal com a barra lateral integrada dentro da grid -->
+    <main class="Fotos-Descricao">
+        <div class="conteudo-principal">
+
+            <!-- Galeria de Fotos -->
+            <section class="Galeria">
+                <div class="Fotos">
+                    <div class="Foto-Galeria foto-principal">
+                        <img src="salsicha.jpg" alt="Cãozinho salsicha hospedado com a Paloma">
+                    </div>
+                    <div class="Foto-Galeria">
+                        <img src="Beagles.jpg" alt="Cãozinho uivando">
+                    </div>
+                    <div class="Foto-Galeria">
+                        <img src="Thor.jpg" alt="Thor e Chantilly brincando juntas">
+                    </div>
+                    <div class="Foto-Galeria">
+                        <img src="Cachorros.jpg" alt="Irmãos com 4 patas">
+                        <button type="button" class="btn-ver-fotos">📷 Ver fotos</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sobre -->
+            <section id="sobre">
+                <h2 class="Titulo">Sobre Paloma</h2>
+                <p style="font-size: 15px; line-height: 1.5;">
+                    Tenho 43 anos de idade e sempre gostei muito de animais. Já tive diversos cães SRD e de raça. No momento tenho 2 cães Anita e a Chantilly que amam companhia e curtem brincar com outros dogs. Recebemos seu amigo em nossa casa com muito amor e dedicação. Local seguro e com supervisão 24horas. Aqui seu amigo nunca ficará sozinho. Seu cãozinho pode ficar dentro de casa e tem também um quintal espaçoso e seguro para correr e brincar muito. Realizamos atividades de recreação entre todos. Dormem todos dentro de casa juntamente com nós humanos.
+                </p>
+                <a href="#" style="color:rgb(69, 71, 71); font-weight: bold; text-decoration: none; font-size: 15px;">Ver mais</a>
+            </section>
+
+            <hr style="border: none; border-top: 2px solid #ddd; margin: 30px 0;">
+
+            <!-- Sobre o local -->
+            <section>
+                <h2 class="secao">Sobre o local</h2>
+                <p>Domicílio é casa</p>
+                <p>Tem quintal médio</p>
+                <p>Janelas com tela de proteção</p>
+                <p>Pets podem subir no sofá</p>
+                <p>Pets podem subir na cama</p>
+                <p>Supervisão 24h</p>
+            </section>
+
+            <hr style="border: none; border-top: 2px solid #ddd; margin: 30px 0;">
+
+            <!-- Avaliações -->
+            <section id="avaliacoes">
+                <div class="avaliacoes-topo">
+                    <h2 class="secao">Avaliações</h2>
+                    <div class="nota-geral">
+                        <span>⭐ <strong>5,0</strong></span>
+                        <span class="total-avaliacoes">(<span id="contador-avaliacoes">616</span> avaliações)</span>
+                    </div>
+                </div>
+
+                <div id="lista-avaliacoes" class="lista-avaliacoes">
+                    <article class="avaliacao-item">
+                        <div class="avaliacao-cabecalho">
+                            <div class="avaliacao-autor">
+                                <div class="avatar-letra">C</div>
+                                <div>
+                                    <strong>Camila Rocha</strong>
+                                    <span class="avaliacao-data">Outubro de 2026 • Tutora do Thor</span>
+                                </div>
+                            </div>
+                            <div class="avaliacao-estrelas">⭐⭐⭐⭐⭐</div>
+                        </div>
+                        <p class="avaliacao-texto">
+                            A Paloma é maravilhosa! Mandou fotos e vídeos o tempo todo. O Thor amou brincar no quintal com a Anita e a Chantilly e voltou super tranquilo para casa.
+                        </p>
+                    </article>
+
+                    <article class="avaliacao-item">
+                        <div class="avaliacao-cabecalho">
+                            <div class="avaliacao-autor">
+                                <div class="avatar-letra">R</div>
+                                <div>
+                                    <strong>Rafael Mendes</strong>
+                                    <span class="avaliacao-data">Setembro de 2026 • Tutor da Mel</span>
+                                </div>
+                            </div>
+                            <div class="avaliacao-estrelas">⭐⭐⭐⭐⭐</div>
+                        </div>
+                        <p class="avaliacao-texto">
+                            Ambiente super seguro, limpo e com supervisão de verdade. Dá para ver que ela tem experiência e carinho genuíno pelos cães. Com certeza vou reservar novamente!
+                        </p>
+                    </article>
+
+                    <article class="avaliacao-item">
+                        <div class="avaliacao-cabecalho">
+                            <div class="avaliacao-autor">
+                                <div class="avatar-letra">J</div>
+                                <div>
+                                    <strong>Juliana Costa</strong>
+                                    <span class="avaliacao-data">Agosto de 2026 • Tutora do Bento</span>
+                                </div>
+                            </div>
+                            <div class="avaliacao-estrelas">⭐⭐⭐⭐⭐</div>
+                        </div>
+                        <p class="avaliacao-texto">
+                            Fiquei muito segura deixando o Bento pela primeira vez. Ele dormiu dentro de casa como está acostumado e foi tratado como parte da família.
+                        </p>
+                    </article>
+                </div>
+
+                <!-- Formulário para nova avaliação -->
+                <form id="form-nova-avaliacao" class="form-avaliacao">
+                    <h3>Deixe sua avaliação</h3>
+                    <div class="avaliacao-form-linha">
+                        <input type="text" id="aval-nome" placeholder="Seu nome" required>
+                        <input type="text" id="aval-pet" placeholder="Nome do seu pet" required>
+                        <select id="aval-nota" aria-label="Nota">
+                            <option value="5">⭐⭐⭐⭐⭐ (5)</option>
+                            <option value="4">⭐⭐⭐⭐ (4)</option>
+                            <option value="3">⭐⭐⭐ (3)</option>
+                            <option value="2">⭐⭐ (2)</option>
+                            <option value="1">⭐ (1)</option>
+                        </select>
+                    </div>
+                    <textarea id="aval-comentario" rows="3" placeholder="Conte como foi a experiência do seu pet com a Tia..." required></textarea>
+                    <button type="submit" class="btn-enviar-avaliacao">Publicar avaliação</button>
+                </form>
+            </section>
+        </div>
+
+        <!-- Barra Lateral de Reserva -->
+        <aside class="coluna">
+            <div class="card" id="card-hospedagem">
+                <h3>Hospedagem</h3>
+                <div class="preco">R$85,00 <span>/noite</span></div>
+
+                <div class="Desconto">
+                    ℹ️ Assinantes têm 20% de desconto.
+                </div>
+
+                <p style="font-size: 14px; color: #666; margin-bottom: 15px;">
+                    Política de cancelamento: <a href="#" style="color: #6a1b9a;">Cancelamento Moderado</a>
+                </p>
+
+                <!-- Botão Principal que abre/fecha o menu de reserva -->
+                <button id="btn-toggle-reserva" class="outline">Reservar</button>
+
+                <!-- Menu/Formulário de Reserva Expansível -->
+                <div id="painel-reserva" class="painel-reserva-oculto">
+                    <form id="form-calculo-reserva">
+                        <div class="campo-grupo">
+                            <label for="checkin">Check-in:</label>
+                            <input type="date" id="checkin" required>
+                        </div>
+
+                        <div class="campo-grupo">
+                            <label for="checkout">Check-out:</label>
+                            <input type="date" id="checkout" required>
+                        </div>
+
+                        <div class="campo-grupo">
+                            <label for="qtd-pets">Quantidade de Pets:</label>
+                            <select id="qtd-pets">
+                                <option value="1">1 Pet</option>
+                                <option value="2">2 Pets</option>
+                                <option value="3">3 ou mais</option>
+                            </select>
+                        </div>
+
+                        <div class="opcao-assinante">
+                            <input type="checkbox" id="sou-assinante">
+                            <label for="sou-assinante">Sou assinante (20% OFF)</label>
+                        </div>
+
+                        <!-- Detalhamento de Valores -->
+                        <div id="resumo-calculo" class="resumo-calculo oculto">
+                            <div class="linha-resumo">
+                                <span id="label-diarias">R$ 85,00 x 0 noites</span>
+                                <span id="valor-subtotal">R$ 0,00</span>
+                            </div>
+                            <div class="linha-resumo desconto-texto oculto" id="linha-desconto">
+                                <span>Desconto Assinante (20%)</span>
+                                <span id="valor-desconto">- R$ 0,00</span>
+                            </div>
+                            <hr>
+                            <div class="linha-resumo total">
+                                <strong>Total:</strong>
+                                <strong id="valor-total">R$ 0,00</strong>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="solid btn-confirmar">Confirmar Reserva</button>
+                    </form>
+                </div>
+
+                <button type="button" id="btn-iniciar-conversa" class="solid">Iniciar conversa</button>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Modal Todas as Fotos -->
+    <div id="modal-todas-fotos" class="modal-fotos-oculto" aria-hidden="true">
+        <div class="modal-fotos-container">
+            <div class="modal-fotos-topo">
+                <h3 id="modal-fotos-titulo">Todas as fotos</h3>
+                <button type="button" id="btn-fechar-todas-fotos" aria-label="Fechar todas as fotos">✕ Fechar</button>
+            </div>
+            <div id="grade-todas-fotos" class="grade-todas-fotos"></div>
+        </div>
+    </div>
+
+    <!-- Modal Lightbox da Galeria (Tela cheia) -->
+    <div id="lightbox-galeria" class="lightbox-oculto" aria-hidden="true">
+        <button type="button" id="lightbox-fechar" aria-label="Fechar galeria">✕</button>
+        <button type="button" id="lightbox-anterior" aria-label="Foto anterior">‹</button>
+        <div class="lightbox-conteudo">
+            <img id="lightbox-img" src="" alt="">
+            <p id="lightbox-legenda"></p>
+        </div>
+        <button type="button" id="lightbox-proximo" aria-label="Próxima foto">›</button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="chatbot.js"></script>
+    <script src="reserva.js"></script>
+    <script src="avaliacoes.js"></script>
+    <script src="galeria.js"></script>
+    <script src="navegacao.js"></script>
+</body>
+</html>
